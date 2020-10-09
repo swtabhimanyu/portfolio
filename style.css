@@ -20,7 +20,7 @@
 			margin-bottom: 50px;
 		}
 
-		@media screen and (max-width: 600px){
+		@media screen and (max-width: 800px){
 			
 			.body-header{
 				height: 75vh;
@@ -317,7 +317,8 @@
 			width: 320px;
 			height:320px;
 			background-color:inherit;
-			margin-right: 30px;
+			margin-left: 20px;
+			margin-right:20px;
 			margin-bottom: 30px;
 			color: grey;
 			border-radius: 10%;

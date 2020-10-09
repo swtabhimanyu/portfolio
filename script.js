@@ -5,7 +5,7 @@ var speed=70;
 
 function printName(){
     if(z<printText.length){
-        console.log(i,printText.charAt(z));
+        // console.log(i,printText.charAt(z));
         document.getElementById("header-user-name").innerHTML+=printText.charAt(z);
         z++;
         setTimeout(printName,speed)
@@ -16,9 +16,9 @@ function printName(){
 
     // For Scroll Smooth
         var sections=document.querySelectorAll('.nav-menu a');
-        console.log(sections);
+        // console.log(sections);
         for(var i=0;i<sections.length;i++){
-            //console.log(sections[i]);
+            // console.log(sections[i]);
             sections[i].addEventListener('click',
             function(event){
                 event.preventDefault(); 
@@ -26,19 +26,19 @@ function printName(){
                 if(text=='home'){
                     var home=document.getElementById('header-user-name');
                     scrollTo(0,home.getBoundingClientRect().top);
-                    console.log("scrolled to home");
+                    // console.log("scrolled to home");
                     return;
                 }
                 var targetsection=document.getElementById(text);
-                console.log(targetsection);
+                // console.log(targetsection);
                 
                 var interval=setInterval(
                     function(){
                     var coordinates=targetsection.getBoundingClientRect();
-                    console.log(sections[i],coordinates.top);
+                    // console.log(sections[i],coordinates.top);
                         if(coordinates.top<=0 ){
                             clearInterval(interval);
-                            console.log(sections[i],"Interval cleared");
+                            // console.log(sections[i],"Interval cleared");
                             return;
                         }
 
@@ -47,7 +47,7 @@ function printName(){
                             //-100 is there to prevent infinte scrolling effect
                             //ineerHeight gives vh
                             clearInterval(interval);
-                            console.log(sections[i],"Interval cleared");
+                            // console.log(sections[i],"Interval cleared");
                             return;
                         }
                         
@@ -112,7 +112,7 @@ function printName(){
     function checkscroll(){
         if(!animation && start.getBoundingClientRect().top<=window.innerHeight){
             animation=true;
-            console.log("inside");
+            // console.log("inside");
             fillbar();
         }
         else if(start.getBoundingClientRect().top>window.innerHeight){
